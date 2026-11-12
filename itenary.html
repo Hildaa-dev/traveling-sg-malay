@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Itinerary SG – Johor – KL · 26 Nov–2 Des 2026</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--tx:#1d1d1f;--mut:#6e6e73;--line:rgba(0,0,0,.1);--acc:#0071e3;--sug:#bf4800;--sugbg:#fff2e5;--planbg:#e8f1fd;--blur:rgba(255,255,255,.72);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--card:#1c1c1e;--tx:#f5f5f7;--mut:#98989d;--line:rgba(255,255,255,.14);--acc:#2997ff;--sug:#ff9f0a;--sugbg:#3a2a0a;--planbg:#0b2a4a;--blur:rgba(28,28,30,.72);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#000;--card:#1c1c1e;--tx:#f5f5f7;--mut:#98989d;--line:rgba(255,255,255,.14);--acc:#2997ff;--sug:#ff9f0a;--sugbg:#3a2a0a;--planbg:#0b2a4a;--blur:rgba(28,28,30,.72);color-scheme:dark}
+html{scroll-padding-top:80px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+header{max-width:1000px;margin:auto;padding:56px 22px 20px}
+h1{margin:0 0 8px;font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.05;font-weight:700;letter-spacing:-.025em}
+header p{margin:0;color:var(--mut);font-size:1.15rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;padding:10px 12px}
+.pill{position:relative;max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:2px;background:var(--blur);-webkit-backdrop-filter:saturate(180%) blur(22px);backdrop-filter:saturate(180%) blur(22px);border:1px solid var(--line);border-radius:999px;padding:7px 12px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.pill a,.pill button{font:inherit;font-size:.9rem;font-weight:500;color:var(--tx);background:none;border:0;text-decoration:none;cursor:pointer;padding:6px 9px;border-radius:999px;transition:color .15s}
+.pill .dd.open>button,.pill a:hover{color:var(--acc)}
+.pill .logo{font-size:1.25rem;padding:2px 8px}
+.menu{display:none;position:absolute;top:calc(100% + 10px);left:0;min-width:230px;background:var(--blur);-webkit-backdrop-filter:saturate(180%) blur(28px);backdrop-filter:saturate(180%) blur(28px);border:1px solid var(--line);border-radius:22px;padding:8px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.dd.open .menu{display:block}
+.menu a{display:block;padding:10px 14px;border-radius:12px}
+.menu a:hover{background:var(--planbg)}
+main{max-width:1000px;margin:auto;padding:8px 22px 64px}
+#app>section,#more>section{max-width:760px}
+#app>#rute{max-width:none}
+section[hidden],header[hidden]{display:none}
+section{margin-top:28px}
+.dh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dh h2{margin:0;font-size:2rem;font-weight:700;letter-spacing:-.02em}
+h2.sh{margin:0;font-size:2rem;font-weight:700;letter-spacing:-.02em}
+.tag{font-size:.75rem;font-weight:600;background:var(--planbg);color:var(--acc);border-radius:999px;padding:3px 10px}
+.note{margin:8px 0 0;font-size:.9rem;color:var(--mut)}
+ol{list-style:none;margin:16px 0 0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+li{position:relative;margin:0 0 12px;padding:14px 16px;background:var(--card);border-radius:18px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+li::before{content:"";position:absolute;left:-26px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--bg)}
+li.s::before{background:var(--sug)}
+.t{font-size:.8rem;font-weight:600;color:var(--acc)}
+li.s .t{color:var(--sug)}
+.b{display:inline-block;font-size:.68rem;font-weight:600;border-radius:999px;padding:1px 8px;margin-left:6px;background:var(--planbg);color:var(--acc)}
+li.s .b{background:var(--sugbg);color:var(--sug)}
+.d{font-weight:600;letter-spacing:-.01em}
+.x{font-size:.92rem;color:var(--mut);margin-top:3px}
+.card{background:var(--card);border-radius:20px;padding:16px;margin-top:14px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.card input,.card select{font:inherit;font-size:.92rem;padding:8px 11px;border:0;border-radius:10px;background:var(--bg);color:var(--tx);min-width:0}
+.card input:focus,.card select:focus{outline:2px solid var(--acc)}
+.card .go{font:inherit;font-weight:600;font-size:.92rem;padding:8px 18px;border:0;border-radius:999px;background:var(--acc);color:#fff;cursor:pointer}
+.tot{font-size:2rem;font-weight:700;letter-spacing:-.02em}
+.g{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:.9rem}
+.g button{background:none;border:0;color:var(--mut);cursor:pointer;font-size:1rem}
+.rg{display:grid;gap:22px}
+@media(min-width:900px){.rg{grid-template-columns:340px 1fr;align-items:start}.mp{position:sticky;top:90px}}
+.mp svg{width:100%;height:auto;background:var(--card);border-radius:24px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.lg{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--mut);margin-top:10px}
+.lg i{display:inline-block;width:22px;border-top:3px solid;vertical-align:middle;margin-right:5px}
+.hd{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.hd .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:600;font-size:.85rem}
+.hd a,.pn a{color:var(--acc);font-weight:500;text-decoration:none;font-size:.95rem}
+.pn{display:flex;justify-content:space-between;margin-top:18px}
+footer{max-width:1000px;margin:auto;padding:0 22px 48px;color:var(--mut);font-size:.82rem}
+.nx{font-size:.88rem;color:var(--acc);margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.pill .lgb{border:1px solid var(--line);font-size:.75rem;font-weight:600;padding:3px 9px}
+body[data-lang="en"] .det{display:none}
+.pill .lang{border:1px solid var(--line);font-weight:600}
+.ckr{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+.ckr input[type=checkbox]{width:20px;height:20px;padding:0;accent-color:var(--acc);flex:none}
+.card input.ct{flex:1;background:transparent;padding:6px 4px}
+.card input.ct.dn{text-decoration:line-through;color:var(--mut)}
+.ckr button{background:none;border:0;color:var(--mut);cursor:pointer;font-size:1rem}
+.rv{text-align:right}
+.pn{flex-wrap:wrap;gap:8px 14px}
+@media(max-width:480px){.pill{padding:6px 8px}.pill a,.pill button{font-size:.78rem;padding:6px 5px}}
+</style>
+</head>
+<body>
+<header id="top"><h1 id="h1"></h1><p id="hp"></p></header>
+<nav id="nav"></nav>
+<main><div id="app"></div></main>
+<footer id="ft"></footer>
+<script>
+const U={
+id:{h1:"Singapore → Johor → Kuala Lumpur",hp:"26 Nov – 2 Des 2026 · Jakarta (CGK) pergi-pulang",ft:"Label <b>Rencana</b> = jadwal dari lo. Label <b>Saran</b> = usulan gue. Jam pertunjukan, jadwal kereta, dan jam buka bisa berubah, cek lagi H-1.",it:"Itinerary ▾",pl:"Tempat ▾",ro:"Rute",co:"Biaya",ck:"Persiapan",ms:"Makan di Singapore",mj:"Makan di Johor Bahru",mk:"Makan di Kuala Lumpur",sum:"Ringkasan imigrasi",ord:"Urutan hari",day:"Hari",see:"Lihat hari",home:"Beranda",plan:"Rencana",sug:"Saran",stay:"Menginap",imm:"Ringkasan untuk imigrasi",rt:"Rute dan cara naik",rtn:"Harga perkiraan, cek lagi sebelum jalan.",pay:"Bayar pakai apa?",fd:"Makan murah dan terjangkau",fdn:"Halal-nya cek langsung di tempat, harga kira-kira.",ex:"Pengeluaran selama trip",rate:"Kurs (ubah sesuai hari-H)",add:"Tambah",ph:"Keterangan",am:"Jumlah",ckn:"Centang yang sudah siap. Teks bisa diedit langsung, tambah atau hapus sesuai kebutuhan.",phc:"Tambah item baru",links:["Peta dan rute ›","Makan murah ›","Biaya ›","Persiapan ›"]},
+en:{h1:"Singapore → Johor → Kuala Lumpur",hp:"26 Nov – 2 Dec 2026 · Jakarta (CGK) round trip",ft:"Plan = fixed schedule. Suggestion = optional idea. Show times, train schedules and opening hours may change.",it:"Itinerary ▾",pl:"Places ▾",ro:"Route",co:"Costs",ck:"Checklist",ms:"Eat in Singapore",mj:"Eat in Johor Bahru",mk:"Eat in Kuala Lumpur",sum:"Immigration summary",ord:"Daily schedule",day:"Day",see:"View day",home:"Home",plan:"Plan",sug:"Suggestion",stay:"Staying at",imm:"Immigration summary",rt:"Routes and how to ride",rtn:"Prices are estimates.",pay:"How to pay",fd:"Cheap eats",fdn:"Check halal status on the spot, prices are approximate.",ex:"Trip expenses",rate:"Exchange rate",add:"Add",ph:"Note",am:"Amount",ckn:"Tick what is ready. Edit text directly, add or delete as needed.",phc:"Add new item",links:["Map and routes ›","Cheap eats ›","Costs ›","Checklist ›"]}};
+const IMM=[
+["Tujuan","Purpose of visit","Liburan dan menghadiri event (28 Nov)","Tourism and attending an event on 28 Nov"],
+["Rute","Route","Jakarta → Singapore → Johor Bahru → Kuala Lumpur → Jakarta","Jakarta → Singapore → Johor Bahru → Kuala Lumpur → Jakarta"],
+["Tiba di Singapore","Arrival in Singapore","26 Nov 2026, CGK → SIN, terbang 19.35, tiba 22.35","26 Nov 2026, Jakarta (CGK) → Singapore (SIN), departs 19:35, arrives 22:35"],
+["Menginap di Singapore","Stay in Singapore","26 Nov: Changi Airport. 27–28 Nov: Cube Boutique Capsule Hotel @ Chinatown","26 Nov: overnight at Changi Airport. 27–28 Nov: Cube Boutique Capsule Hotel @ Chinatown"],
+["Menginap di Johor","Stay in Johor Bahru","28–29 Nov: Attrus Bed & Breakfast","28–29 Nov: Attrus Bed & Breakfast"],
+["Menginap di KL","Stay in Kuala Lumpur","29 Nov–2 Des: Swing & Pillows Central Market","29 Nov–2 Dec: Swing & Pillows Central Market"],
+["Pulang","Departure","2 Des 2026, KUL → CGK, 21.30","2 Dec 2026, Kuala Lumpur (KUL) → Jakarta (CGK), 21:30"]];
+const GR=[["umum",["Umum","General"]],["sg",["Singapore","Singapore"]],["my",["Malaysia","Malaysia"]]];
+const CK0=[
+["umum","Paspor (masa berlaku 6 bulan lebih, halaman kosong cukup)"],["umum","Tiket pesawat pergi-pulang (simpan offline)"],["umum","Bukti booking hotel semua kota"],["umum","Asuransi perjalanan"],["umum","Power bank (bawa di kabin) dan charger"],["umum","Adaptor colokan Type G (Singapore dan Malaysia)"],["umum","Obat pribadi dan P3K kecil"],["umum","Salinan paspor dan itinerary (versi EN, offline)"],
+["sg","SG Arrival Card (isi maks 3 hari sebelum tiba)"],["sg","Uang SGD tunai"],["sg","Kartu Visa/Mastercard contactless"],["sg","eSIM atau SIM Singapore"],["sg","Alamat Cube Boutique Capsule Hotel disimpan di HP"],["sg","Aplikasi Grab dan bike sharing (Anywheel)"],["sg","Payung atau jas hujan tipis (November musim hujan)"],["sg","Cek jam Spectra dan Garden Rhapsody"],
+["my","MDAC (isi maks 3 hari sebelum masuk, cek apakah wajib)"],["my","Uang ringgit (tukar di Woodlands atau JB)"],["my","Kartu Touch n Go"],["my","Tiket KTM ETS JB Sentral ke KL Sentral"],["my","Alamat Attrus B&B dan Swing & Pillows disimpan di HP"],["my","eSIM atau SIM Malaysia"],["my","Pakaian sopan buat masjid dan Batu Caves"],["my","Tiket KLIA Ekspres"]];
+const D=[
+{id:"d1",n:"Kam 26 Nov",ne:"Thu 26 Nov",h:"Berangkat ke Changi",he:"Departure to Changi",tag:"CGK → SIN",stay:"Changi Airport",note:"Zona waktu Singapura +1 jam dari WIB.",
+i:[
+["06.00–09.00","Otw ke Jakarta","On the way to Jakarta","Tiba sekitar 09.00. Simpan paspor dan boarding pass di tas kecil.","p","Dari titik tiba di Jakarta ke Soetta: Damri atau KA Bandara (paling bebas macet), atau Grab."],
+["09.00–11.00","Otw ke Soetta","On the way to Soekarno-Hatta Airport","Dua jam dikasih buat jaga-jaga macet.","p","Turun di Terminal 3 (cek terminal di tiket). Jalan kaki ke tempat makan."],
+["11.00–12.00","Sholat dan makan","Prayer and lunch","Zuhur masuk sekitar 11.50. Makan sampai kenyang, di area keberangkatan lebih mahal.","p","Jalan kaki di dalam Terminal 3 ke tempat kerja."],
+["12.00–13.00","Cari tempat kerja dekat Terminal 3","Find a workspace near Terminal 3","Cari kafe atau area dengan colokan dan wifi. Lounge berbayar juga bisa.","p","Tetap di tempat yang sama."],
+["13.00–14.00","Siap-siap kerja","Prepare for work","Makan ringan, cas laptop dan HP, tes koneksi.","s",""],
+["14.00–16.00","Kerja","Work","Asar masuk sekitar 15.15.","p","Jalan kaki ke counter check-in di lantai keberangkatan T3."],
+["16.00–18.00","Check-in bagasi dan imigrasi","Baggage check-in and immigration","Urutan: check-in bagasi, imigrasi, security. Siapkan paspor, tiket, dan SG Arrival Card.","p","Setelah security, ke mushola lalu gate."],
+["18.00–18.30","Sholat dan persiapan","Prayer and preparation","Maghrib masuk sekitar 17.55. Isi botol air, ke toilet.","p","Jalan kaki ke gate."],
+["18.30","Boarding","Boarding","Cek gate di layar, jangan jauh dari gate.","p","Naik pesawat."],
+["19.35","Flight CGK → SIN","Flight Jakarta (CGK) → Singapore (SIN)","","p","Landing di Changi."],
+["22.35","Landing Changi","Arrival at Changi Airport","Isi SG Arrival Card sebelum landing.","p","Ikuti papan Arrivals ke imigrasi dan bagasi."],
+["Malam","Nginep di Changi","Overnight at Changi Airport","Cari area istirahat di T3 atau Jewel.","p","Besok pagi jalan kaki ke kantin karyawan Changi."]]},
+{id:"d2",n:"Jum 27 Nov",ne:"Fri 27 Nov",h:"Changi, National Gallery, Marina Bay",he:"Changi, National Gallery, Marina Bay",tag:"SIN",stay:"Cube Boutique Capsule Hotel @ Chinatown",note:"Hari Jumat. Kalau mau Jumatan: Masjid Jamae (South Bridge Road) atau Masjid Al-Abrar (Telok Ayer) dekat hotel, atau Masjid Sultan di Kampong Glam, khutbah sekitar 13.00. Sore searah: Fort Canning, Chijmes, Haji Lane, lalu MRT ke Merlion, sepeda ke MBS, Gardens, hawker, hotel. Spectra gue buang biar makan malam hawker kebagian jam wajar.",
+i:[
+["Pagi","Sarapan di kantin karyawan Changi","Breakfast at the Changi staff canteen","","p","Jalan kaki ke Hubspot."],
+["Pagi","Mandi di Hubspot","Shower at Hubspot","","p","Jalan kaki ke Jewel."],
+["09.30–10.45","Jewel: HSBC Rain Vortex dan Shiseido Forest Valley","Jewel: HSBC Rain Vortex and Shiseido Forest Valley","Rain Vortex air terjun indoor setinggi sekitar 40 m. Lihat dari bawah (Level 1) dan dari lantai-lantai atas mal. Light and sound show ada malam hari, siang cukup lihat airnya. Cek jam buka dan jadwal show di Jewel.","p","Jalan kaki lewat link bridge ke Terminal 2 (ikuti papan T2)."],
+["10.45–11.30","Wonderfall di Terminal 2","Wonderfall at Terminal 2","Cek lokasi dan akses di app Changi, sebagian area T2 hanya untuk penumpang.","p","Jalan kaki ke stasiun MRT Changi Airport (ikuti papan MRT)."],
+["11.30–12.00","Otw hotel Chinatown, taruh koper","Go to hotel in Chinatown, drop luggage","MRT Changi Airport (CG2) 1 stasiun ke Expo (CG1), ganti Downtown line arah Bukit Panjang, turun Chinatown (DT19). Sampai hotel sekitar 12.20, jalan kaki 5–10 menit dari stasiun (cek Google Maps). Kalau mepet, geser National Gallery 30 menit.","p","Dari Chinatown (NE4) naik North East line arah Punggol 2 stasiun ke Dhoby Ghaut, ganti North-South line arah Marina South Pier, turun City Hall. Jalan kaki 5–10 menit ke National Gallery."],
+["12.00–13.30","National Gallery Singapore","National Gallery Singapore","","p","Sholat di mushola terdekat (tanya info desk)."],
+["13.30–14.00","Sholat","Prayer break","Jumatan: lihat catatan di atas.","p","Jalan kaki sekitar 15–20 menit naik ke Fort Canning Park, ikuti papan Tree Tunnel."],
+["14.00–15.00","Fort Canning Tree Tunnel","Fort Canning Tree Tunnel","Lorong pohon besar di Fort Canning Park, bagus buat foto. Akses alternatif lewat stasiun Fort Canning (DT20).","s","Jalan kaki turun sekitar 15 menit ke Chijmes."],
+["15.00–16.00","Chijmes","Chijmes","Bekas biara dengan kapel dan halaman dalam, banyak kafe dan restoran. Ngopi dan foto.","s","Jalan kaki sekitar 12 menit ke Bugis, lanjut ke Haji Lane."],
+["16.00–17.00","Haji Lane, Masjid Sultan, dan es krim S$1","Haji Lane, Sultan Mosque and S$1 ice cream","Haji Lane penuh mural dan toko kecil. Masjid Sultan 5 menit jalan dari sana, Asar di sini. Es krim S$1: cari gerobak es krim roti atau wafer yang biasa mangkal di sekitar Bugis dan Orchard, harga sekarang bisa naik sedikit dari S$1.","s","Jalan ke Bugis MRT (EW12), East-West line arah Tuas Link 2 stasiun ke Raffles Place, jalan kaki sekitar 10 menit ke Merlion Park."],
+["17.00–17.30","Merlion Park dan ambil sepeda","Merlion Park and pick up a bike","Foto Merlion dengan MBS di belakang. Bike sharing (Anywheel lewat app) ada di sekitar Merlion.","s","Naik sepeda lewat Esplanade Bridge ke Esplanade."],
+["17.30–18.45","Naik sepeda keliling Marina Bay saat sunset","Cycle around Marina Bay at sunset","Sunset sekitar 18.45. Esplanade, Helix Bridge, sampai MBS, sekitar 3 km sambil foto. Kalau sepeda tidak ada, jalan kaki 40–50 menit.","s","Parkir sepeda di area bike sharing dekat MBS, masuk Shoppes."],
+["19.00–19.15","Maghrib dan jajan ringan di MBS Shoppes","Prayer and a light snack at MBS Shoppes","Maghrib sekitar 19.00, tanya info desk soal mushola. Jajan ringan dulu, makan besar nanti di hawker.","s","Jalan kaki sekitar 15 menit ke Gardens by the Bay, ikuti papan Gardens by the Bay."],
+["19.45","Garden Rhapsody di Supertree Grove","Garden Rhapsody at Supertree Grove","Gratis, sekitar 15 menit. Cek jadwal terbaru.","s","Jalan ke stasiun Bayfront, Downtown line arah Bukit Panjang, turun Downtown atau Telok Ayer (1–2 stasiun)."],
+["20.45–22.00","Makan malam hawker di Lau Pa Sat","Hawker dinner at Lau Pa Sat","Hawker centre dekat stasiun Downtown dan Telok Ayer. Satay street di Boon Tat Street ramai setelah jam 19.00. Cek logo halal. Boleh ganti ke Maxwell atau Chinatown Complex kalau lebih dekat hotel.","s","Jalan kaki sekitar 15 menit lewat Telok Ayer Street ke hotel di Chinatown, atau MRT 1 stasiun."],
+["22.00","Balik ke hotel","Back to the hotel","Siapin tas buat besok.","s",""]]},
+{id:"d3",n:"Sab 28 Nov",ne:"Sat 28 Nov",h:"Google event, lanjut ke Johor",he:"Google event, then to Johor Bahru",tag:"SIN → JB",stay:"Attrus Bed & Breakfast, Johor Bahru",note:"Check-out Cube Hotel sebelum event (titip koper di resepsionis kalau perlu). Imigrasi Woodlands sore Sabtu biasanya antre 30–90 menit. Isi MDAC sebelum nyebrang. Alamat persis Attrus B&B cek di booking, gue anggap di pusat kota JB.",
+i:[
+["Pagi–14.00","Event Google","Google event","","p","Dari lokasi event ke Cube Hotel naik MRT atau Grab."],
+["14.00–15.00","Balik hotel, ambil koper","Back to hotel, pick up luggage","","p","Chinatown (NE4) North East line arah Punggol 2 stasiun ke Dhoby Ghaut, ganti North-South line arah Jurong East."],
+["15.00–16.00","Otw Woodlands","Travel to Woodlands","MRT sampai Woodlands (NS9), total sekitar 45 menit dari hotel.","p","Stasiun Woodlands terhubung ke Causeway Point."],
+["16.00–17.30","Santai di Causeway Point","Rest at Causeway Point","Makan sore, Asar, tukar ringgit, beli eSIM Malaysia.","s","Jalan kaki 5–10 menit ke Woodlands Temporary Interchange."],
+["17.30–18.30","Antre imigrasi Woodlands","Woodlands immigration queue","Naik bus lintas batas ke JB Sentral (Causeway Link CW1/CW2 atau bus 170, cek papan tujuan). Mulai agak awal.","s","Naik bus melewati Causeway, turun di JB Sentral."],
+["18.30–18.35","Otw Johor","Cross into Johor","","p","Dari JB Sentral ke Attrus B&B: jalan kaki atau Grab (cek alamat dan jam check-in)."],
+["18.35–19.00","Ishoma dan check-in Attrus B&B","Prayer, rest and check in at Attrus Bed & Breakfast","Taruh koper, sholat Isya dengan jamak.","p","Jalan kaki ke Jalan Trus."],
+["19.00–19.45","Jalan Trus: Glass Temple dan Old Chinese Temple","Jalan Trus: Glass Temple and Old Chinese Temple","Dua kuil berdekatan.","s","Jalan kaki sekitar 5 menit ke Jalan Tan Hiok Nee."],
+["19.45–20.30","Jalan Tan Hiok Nee dan Jalan Wong Ah Fook","Jalan Tan Hiok Nee and Jalan Wong Ah Fook","Heritage street dan mural.","s","Jalan kaki sekitar 5 menit ke Jalan Dhoby."],
+["20.30–22.00","Jalan Dhoby: makan malam dan kafe","Dinner and cafes at Jalan Dhoby","Mee rebus atau laksa Johor, tanya halal ke penjual.","s","Jalan kaki 10–15 menit ke Dataran Bandaraya."],
+["22.00–23.00","Dataran Bandaraya dan Sultan Ibrahim Building","Dataran Bandaraya and Sultan Ibrahim Building","Foto bangunan saat malam.","s","Pulang ke Attrus B&B jalan kaki atau Grab."]]},
+{id:"d4",n:"Min 29 Nov",ne:"Sun 29 Nov",h:"Johor, lanjut kereta ke KL",he:"Johor Bahru, then train to Kuala Lumpur",tag:"JB → KL",stay:"Swing & Pillows Central Market, Kuala Lumpur",note:"Pagi searah barat ke timur: masjid paling barat, pusat kota, lalu JB Sentral. Beli tiket KTM ETS dari jauh hari di ktmb.com.my, sekitar 4 jam.",
+i:[
+["07.00–08.00","Sarapan dan check-out Attrus B&B","Breakfast and check out of Attrus Bed & Breakfast","Titip koper di resepsionis kalau bisa, diambil lagi sebelum ke JB Sentral.","s","Grab sekitar 15 menit ke Masjid Sultan Abu Bakar."],
+["08.00–09.15","Masjid Sultan Abu Bakar","Sultan Abu Bakar State Mosque","Paling barat dari rute hari ini.","s","Jalan kaki atau Grab pendek ke Istana Besar."],
+["09.15–11.00","Istana Besar Johor dan Royal Abu Bakar Museum","Istana Besar Johor and Royal Abu Bakar Museum","Cek jam buka museum.","s","Grab sekitar 10–15 menit ke pusat kota."],
+["11.00–13.30","Makan siang dan oleh-oleh, ambil koper","Lunch, souvenirs and pick up luggage","Laksa Johor atau mee rebus. Zuhur sekitar 13.00.","s","Dari hotel jalan kaki atau Grab 5 menit ke JB Sentral."],
+["13.30–14.00","Otw JB Sentral","Go to JB Sentral station","","p","Masuk stasiun JB Sentral."],
+["14.00–15.00","Istirahat dan beli bekal","Rest and buy snacks","Sholat Zuhur dan Asar, jamak.","s","Naik KTM ETS dari JB Sentral."],
+["15.00–19.20","Kereta ETS ke KL","ETS train to Kuala Lumpur","Kereta langsung ke KL Sentral.","p","Dari KL Sentral naik LRT Kelana Jaya line arah Gombak 1 stasiun ke Pasar Seni, jalan kaki 5 menit ke Swing & Pillows."],
+["19.20–20.00","Check-in dan bersih-bersih","Check in and freshen up","","p","Dari Pasar Seni naik LRT Kelana Jaya arah Gombak 3 stasiun (Masjid Jamek, Dang Wangi, Kampung Baru)."],
+["20.00–21.15","Kampung Baru: makan malam","Dinner at Kampung Baru","Nasi lemak dan satay halal.","s","LRT Kelana Jaya satu stasiun ke KLCC."],
+["21.15–22.30","Taman KLCC dan Petronas Twin Towers","KLCC Park and Petronas Twin Towers","Lake Symphony sekitar jam 21.00 dan 22.00, cek jadwal.","s","Pulang LRT Kelana Jaya arah Putra Heights 4 stasiun ke Pasar Seni, jalan kaki 5 menit."]]},
+{id:"d5",n:"Sen 30 Nov",ne:"Mon 30 Nov",h:"KL: Batu Caves ke pusat kota",he:"Kuala Lumpur: Batu Caves to the city centre",tag:"KL",stay:"Swing & Pillows Central Market, Kuala Lumpur",note:"Searah utara ke tenggara: Batu Caves, Pasar Seni (hotel), Petaling Street, Masjid Jamek, Bukit Bintang. Dari hotel ke Batu Caves: LRT 1 stasiun ke KL Sentral lalu KTM.",
+i:[
+["08.00–11.00","Batu Caves","Batu Caves","KTM Komuter dari KL Sentral sekitar 30 menit. Naik 272 anak tangga, bawa air.","s","KTM balik ke KL Sentral, LRT Kelana Jaya arah Gombak 1 stasiun ke Pasar Seni."],
+["11.30–13.30","Central Market dan makan siang","Lunch at Central Market","Hotel di sebelah, bisa taruh barang. Zuhur sekitar 13.15.","s","Jalan kaki sekitar 5 menit ke Petaling Street."],
+["13.30–15.00","Petaling Street","Petaling Street","Pasar Chinatown, pilih jajanan halal.","s","Jalan kaki sekitar 15 menit ke Masjid Jamek, atau LRT Kelana Jaya 1 stasiun dari Pasar Seni."],
+["15.00–17.30","Masjid Jamek, Merdeka Square, Sultan Abdul Samad Building","Masjid Jamek, Merdeka Square and Sultan Abdul Samad Building","Asar sekitar 15.15 di Masjid Jamek, jaga pakaian.","s","MRT Kajang line dari stasiun Merdeka 1 stasiun ke Bukit Bintang (jalan kaki 10–15 menit ke stasiun Merdeka), atau Grab 10–15 menit."],
+["18.00–22.00","Bukit Bintang","Bukit Bintang","Pavilion KL dan Lot 10 Hutong. Jalan Alor mayoritas non-halal.","s","Pulang MRT Kajang line arah Kwasa Damansara 2 stasiun ke Pasar Seni, jalan kaki 5 menit."]]},
+{id:"d6",n:"Sel 1 Des",ne:"Tue 1 Dec",h:"KL: Putrajaya",he:"Kuala Lumpur: Putrajaya",tag:"KL",stay:"Swing & Pillows Central Market, Kuala Lumpur",note:"Di Putrajaya dari utara ke selatan: Masjid Putra, lalu Masjid Besi, terakhir Putrajaya Sentral.",
+i:[
+["09.00–09.40","ERL Transit ke Putrajaya","ERL Transit to Putrajaya","Dari hotel LRT 1 stasiun ke KL Sentral, lalu ERL sekitar 20 menit.","s","Grab dari Putrajaya Sentral ke Masjid Putra (10–20 menit)."],
+["09.40–10.45","Masjid Putra dan Putra Square","Putra Mosque and Putra Square","Jaga pakaian, jubah pinjaman gratis.","s","Jalan kaki ke Perdana Putra dan Seri Wawasan Bridge."],
+["10.45–11.30","Perdana Putra dan Seri Wawasan Bridge","Perdana Putra and Seri Wawasan Bridge","Foto dari luar.","s","Jalan kaki atau Grab 5 menit ke dermaga lake cruise."],
+["11.30–12.30","Putrajaya Lake Cruise","Putrajaya Lake Cruise","Cek jadwal dan harga di loket.","s","Grab ke tempat makan siang."],
+["12.30–14.00","Makan siang dan Zuhur","Lunch and prayer","","s","Grab sekitar 10 menit ke Masjid Besi."],
+["14.00–15.00","Masjid Besi (Iron Mosque)","Iron Mosque","","s","Grab 10–15 menit ke Putrajaya Sentral, ERL ke KL Sentral."],
+["15.30–18.00","Balik KL dan istirahat","Return to KL and rest","","s","Dari KL Sentral jalan kaki 10 menit ke Brickfields."],
+["18.00–21.00","Brickfields dan Little India","Dinner at Brickfields and Little India","Masakan India, banyak yang halal. Dekat KL Sentral.","s","Jalan balik ke KL Sentral, LRT Kelana Jaya arah Gombak 1 stasiun ke Pasar Seni."]]},
+{id:"d7",n:"Rab 2 Des",ne:"Wed 2 Dec",h:"KL lalu pulang",he:"Kuala Lumpur, then fly home",tag:"KUL → CGK",stay:"Check-out Swing & Pillows Central Market",note:"Pagi searah: Masjid Negara, Islamic Arts Museum, Perdana Botanical Gardens, balik ke hotel ambil koper, lalu ke bandara.",
+i:[
+["08.00–09.15","Check-out dan Masjid Negara","Check out and visit the National Mosque","Titip koper di resepsionis. Grab dari hotel sekitar 10 menit (RM 6–10). Jubah dipinjamkan di pintu.","s","Jalan kaki sekitar 10 menit ke Islamic Arts Museum Malaysia."],
+["09.15–11.00","Islamic Arts Museum Malaysia","Islamic Arts Museum Malaysia","Cek jam buka.","s","Jalan kaki sekitar 10 menit ke Perdana Botanical Gardens."],
+["11.00–12.00","Perdana Botanical Gardens","Perdana Botanical Gardens","Jalan santai.","s","Grab sekitar 10 menit ke hotel di Pasar Seni."],
+["12.00–13.00","Makan siang di Central Market, ambil koper","Lunch at Central Market, pick up luggage","","s","LRT Kelana Jaya arah Putra Heights 1 stasiun ke KL Sentral, lalu KLIA Ekspres."],
+["13.00–14.00","Otw bandara KL","Go to KL airport","KLIA Ekspres sekitar 30 menit tanpa berhenti. Turun di KLIA atau klia2 sesuai tiket.","p","Jalan kaki ke tempat kerja di bandara."],
+["14.00–16.00","Makan dan istirahat di bandara","Meal and rest at the airport","","s","Cari meja kerja."],
+["16.00–19.00","Kerja","Work","","p","Jalan ke counter check-in."],
+["19.00–20.00","Check-in bagasi","Baggage check-in","","p","Lanjut imigrasi dan gate."],
+["21.30","Flight ke Jakarta","Flight to Jakarta","","p",""]]}
+];
+const R=[
+["27 Nov","Changi → Chinatown (hotel)","MRT dari Changi Airport (CG2) 1 stasiun ke Expo (CG1), ganti Downtown line arah Bukit Panjang, turun Chinatown (DT19). Sekitar 45 menit.","Tap kartu Visa/Mastercard contactless di gantry, pakai kartu yang sama masuk dan keluar.","SGD 2–3"],
+["27 Nov","Chinatown → City Hall (National Gallery)","North East line arah Punggol dari Chinatown (NE4) 2 stasiun ke Dhoby Ghaut, ganti North-South line arah Marina South Pier 1 stasiun ke City Hall. Jalan kaki 5–10 menit ke Gallery.","Tap kartu.","SGD 1,5–2"],
+["27 Nov","National Gallery → Fort Canning → Chijmes → Haji Lane","Jalan kaki: Gallery naik ke Fort Canning Park (15–20 menit), turun ke Chijmes (15 menit), lanjut ke Bugis dan Haji Lane (12–20 menit).","Gratis, es krim sekitar S$1–2.","SGD 1–2"],
+["27 Nov","Haji Lane → Bugis → Raffles Place → Merlion","MRT East-West line dari Bugis (EW12) arah Tuas Link 2 stasiun ke Raffles Place, jalan kaki 10 menit ke Merlion Park.","Tap kartu.","SGD 1,5"],
+["27 Nov","Merlion → Esplanade → Helix → MBS (sepeda)","Sepeda bike sharing (Anywheel) lewat app, parkir di area bertanda dekat MBS. Tanpa sepeda: jalan kaki 40–50 menit.","Bayar lewat app (kartu). Cek tarif di app.","beberapa dolar"],
+["27 Nov","MBS → Gardens → Lau Pa Sat → Chinatown","Jalan kaki 15 menit ke Gardens. Dari Bayfront Downtown line arah Bukit Panjang ke Downtown atau Telok Ayer, jalan kaki ke Lau Pa Sat, lalu jalan kaki atau MRT 1 stasiun ke Chinatown.","Tap kartu. Hawker bayar tunai atau QR di stan.","SGD 1,5 + makan SGD 6–10"],
+["28 Nov","Chinatown → Woodlands","North East line 2 stasiun ke Dhoby Ghaut, ganti North-South line arah Jurong East sampai Woodlands (NS9). Total sekitar 45 menit. Stasiun terhubung ke Causeway Point.","Tap kartu.","SGD 2–2,5"],
+["28 Nov","Woodlands → JB Sentral","Jalan kaki ke Woodlands Temporary Interchange, naik bus lintas batas ke JB Sentral (CW1/CW2 atau bus 170, cek papan tujuan). Turun di imigrasi SG untuk cap paspor, naik bus berikutnya (tiket tetap berlaku), turun lagi di imigrasi Malaysia dan naik sampai JB Sentral.","Tunai SGD pas atau EZ-Link, tanya sopir.","SGD 2–3"],
+["28 Nov","JB Sentral → Attrus B&B → keliling Johor malam","Ke Attrus B&B jalan kaki atau Grab. Lalu jalan kaki searah: Jalan Trus, Tan Hiok Nee, Wong Ah Fook, Dhoby, Dataran Bandaraya. Antar titik 5–15 menit.","Grab pakai app (kartu atau tunai ringgit).","Grab RM 8–15"],
+["29 Nov","Johor pagi (barat ke timur)","Grab ke Masjid Sultan Abu Bakar, jalan kaki atau Grab pendek ke Istana Besar, Grab ke pusat kota (makan, ambil koper), lalu jalan kaki atau Grab 5 menit ke JB Sentral.","Grab pakai app.","RM 10–20 per Grab"],
+["29 Nov","JB Sentral → KL Sentral → Pasar Seni (hotel)","KTM ETS langsung sekitar 4 jam. Dari KL Sentral LRT Kelana Jaya arah Gombak 1 stasiun ke Pasar Seni, jalan kaki 5 menit ke hotel.","Beli ETS online di app atau web KTMB, atau loket. LRT Touch n Go atau token.","ETS RM 40–80, LRT RM 1–2"],
+["29 Nov","Pasar Seni → Kampung Baru → KLCC → Pasar Seni","LRT Kelana Jaya arah Gombak: Masjid Jamek, Dang Wangi, Kampung Baru (3 stasiun), lanjut 1 stasiun ke KLCC. Pulang arah Putra Heights 4 stasiun ke Pasar Seni.","Touch n Go atau token di mesin.","RM 2–4"],
+["30 Nov","Hotel → Batu Caves → Pasar Seni → Masjid Jamek → Bukit Bintang → hotel","LRT 1 stasiun ke KL Sentral, KTM ke Batu Caves, balik ke Pasar Seni. Jalan kaki ke Petaling Street dan Masjid Jamek. Ke Bukit Bintang: MRT Kajang line dari stasiun Merdeka 1 stasiun, atau Grab. Pulang MRT Kajang line arah Kwasa Damansara 2 stasiun ke Pasar Seni.","KTM beli di mesin stasiun. LRT dan MRT Touch n Go atau token.","KTM RM 3, lainnya RM 1–4"],
+["1 Des","Hotel → KL Sentral → Putrajaya pergi-pulang","LRT 1 stasiun ke KL Sentral, ERL ke Putrajaya Sentral 20 menit. Di Putrajaya Grab: utara dulu (Masjid Putra), lalu selatan (Masjid Besi), terakhir Putrajaya Sentral. Malam ke Brickfields dan LRT balik ke Pasar Seni.","Tiket ERL di mesin atau loket. Grab pakai app.","ERL sekitar RM 14, Grab RM 8–15"],
+["2 Des","Masjid Negara → Islamic Arts Museum → Botanical → hotel → bandara","Grab ke Masjid Negara, jalan kaki ke Islamic Arts Museum lalu Perdana Botanical Gardens, Grab ke hotel ambil koper, LRT 1 stasiun ke KL Sentral, KLIA Ekspres ke bandara.","KLIA Ekspres di mesin, loket, atau app. Bus alternatif RM 12–15.","KLIA Ekspres sekitar RM 55"]
+];
+const F={sg:[
+["Es krim sandwich S$1 (ice cream uncle)","Gerobak es krim roti atau wafer, biasanya ada di sekitar Orchard, Bugis, dan Raffles Place. Harga sekarang bisa naik sedikit dari S$1.","SGD 1–2"],
+["Lau Pa Sat (satay street, Boon Tat Street)","Hawker centre dekat stasiun Downtown dan Telok Ayer, satay street ramai malam hari. Cek logo halal.","SGD 6–12"],
+["Kantin karyawan dan food court terminal Changi","Sarapan dan makan murah, jauh lebih murah dari Jewel.","SGD 3–6"],
+["Satay by the Bay (Gardens by the Bay)","Banyak gerai halal, enak buat makan malam sebelum Garden Rhapsody.","SGD 8–12"],
+["Zam Zam, Arab Street","Murtabak dan nasi briyani halal, porsi besar.","SGD 6–10"],
+["Chinatown Complex Food Centre (dekat hotel)","Sarapan dan makan murah dekat hotel, banyak non-halal, cari logo halal.","SGD 4–6"],
+["Satay Boon Tat Street (Lau Pa Sat)","Satay malam hari, cocok setelah sunset di Merlion.","SGD 10–15"]],
+jb:[
+["Kedai mamak (roti canai, teh tarik)","Sarapan paling murah, mudah ditemukan di sekitar Jalan Dhoby.","RM 5–10"],
+["Warung mee rebus atau laksa Johor","Masakan khas Johor, tanya halal ke penjualnya.","RM 8–12"],
+["Nasi campur, nasi ayam penyet","Pilih warung yang ramai lokal.","RM 8–15"]],
+kl:[
+["Nasi Lemak Antarabangsa, Kampung Baru","Nasi lemak ayam goreng berempah, ramai tiap malam.","RM 8–12"],
+["Medan selera Jalan Masjid India","Banyak gerai halal buat makan malam.","RM 8–15"],
+["Nasi Kandar Pelita atau kedai mamak","Buka sampai larut, menu banyak.","RM 10–20"],
+["Jalan Alor, Bukit Bintang","Ramai dan seru, tapi mayoritas non-halal dan lebih mahal. Cocok buat jalan malam.","RM 15–30"]]};
+</script>
+<script>
+const $=i=>document.getElementById(i);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ld=(k,f)=>{try{const s=localStorage.getItem(k);return s?JSON.parse(s):f}catch(e){return f}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let L=ld("trip-lang","id");
+let E=Object.assign({rate:{SGD:12500,MYR:3800},items:[]},ld("trip-exp",{}));
+let C=ld("trip-ck",null)||CK0.map(x=>({g:x[0],t:x[1],d:false}));
+const t=k=>U[L][k],pk=a=>a[L=="id"?0:1];
+const fm=n=>Math.round(n).toLocaleString(L=="id"?"id-ID":"en-US");
+const rt=c=>c=="IDR"?1:E.rate[c];
+const li=(tm,h,x,cls,badge)=>`<li class="${cls}"><span class="t">${tm}</span>${badge?`<span class="b">${badge}</span>`:""}<div class="d">${h}</div>${x}</li>`;
+const item=x=>li(x[0],pk([x[1],x[2]]),(x[3]?`<div class="x det">${x[3]}</div>`:"")+(x[5]?`<div class="nx det">→ ${x[5]}</div>`:""),x[4],x[4]=="p"?t("plan"):t("sug"));
+const fl=a=>"<ol>"+a.map(f=>li(f[2],f[0],`<div class="x">${f[1]}</div>`,"s")).join("")+"</ol>";
+const ckHtml=()=>`<h2 class="sh">${t("ck")}</h2><p class="note">${t("ckn")}</p>`+GR.map(g=>{const a=C.map((c,i)=>[c,i]).filter(z=>z[0].g==g[0]);return `<div class="card"><b>${pk(g[1])}</b> <span class="x">${a.filter(z=>z[0].d).length}/${a.length}</span>${a.map(z=>`<div class="ckr"><input type="checkbox" data-c="${z[1]}" ${z[0].d?"checked":""}><input class="ct${z[0].d?" dn":""}" data-t="${z[1]}" value="${esc(z[0].t)}"><button data-x="${z[1]}" aria-label="delete">✕</button></div>`).join("")}</div>`}).join("")+`<div class="card"><div class="row"><select id="cg">${GR.map(g=>`<option value="${g[0]}">${pk(g[1])}</option>`).join("")}</select><input id="ci" placeholder="${t("phc")}" style="flex:1"><button class="go" id="ca">${t("add")}</button></div></div>`;
+function drawE(){
+$("rs").value=E.rate.SGD;$("rm").value=E.rate.MYR;
+$("et").textContent="Total Rp "+fm(E.items.reduce((a,x)=>a+x.a*rt(x.c),0));
+const bk={};E.items.forEach(x=>bk[x.k]=(bk[x.k]||0)+x.a*rt(x.c));
+$("ep").textContent=Object.keys(bk).map(k=>k+": Rp "+fm(bk[k])).join(" · ");
+$("el").innerHTML=E.items.map((x,i)=>`<div class="g"><span>${esc(x.h)} · ${esc(x.k)} · ${esc(x.d||"-")}</span><span>${fm(x.a)} ${x.c} <button data-i="${i}">✕</button></span></div>`).join("");
+}
+function render(){
+document.documentElement.lang=L;document.body.dataset.lang=L;
+$("h1").textContent=t("h1");$("hp").textContent=t("hp");$("ft").innerHTML=t("ft");
+$("nav").innerHTML=`<div class="pill"><a class="logo" href="#">✈️</a><div class="dd"><button>${t("it")}</button><div class="menu"><a href="#">${t("sum")}</a>${D.map(d=>`<a href="#${d.id}">${pk([d.n,d.ne])} · ${d.tag}</a>`).join("")}</div></div><div class="dd"><button>${t("pl")}</button><div class="menu"><a href="#makan-sg">${t("ms")}</a><a href="#makan-jb">${t("mj")}</a><a href="#makan-kl">${t("mk")}</a></div></div><a href="#rute">${t("ro")}</a><a href="#biaya">${t("co")}</a><a href="#cek">${t("ck")}</a><button class="lang" id="lg">${L=="id"?"EN":"ID"}</button></div>`;
+const home=`<section id="home"><h2 class="sh">${t("imm")}</h2><div class="card">${IMM.map(r=>`<div class="g"><b>${pk([r[0],r[1]])}</b><span class="rv">${pk([r[2],r[3]])}</span></div>`).join("")}</div><h2 class="sh" style="margin-top:34px">${t("ord")}</h2>${D.map((d,i)=>`<div class="hd"><span class="n">${i+1}</span><div><div class="x">${pk([d.n,d.ne])} · ${t("day")} ${i+1} · ${d.tag}</div><div class="d" style="font-size:1.1rem">${pk([d.h,d.he])}</div><div class="x">🛏 ${d.stay}</div><a href="#${d.id}">${t("see")} ${i+1} ›</a></div></div>`).join("")}<p class="pn"><a href="#rute">${t("links")[0]}</a><a href="#makan">${t("links")[1]}</a><a href="#biaya">${t("links")[2]}</a><a href="#cek">${t("links")[3]}</a></p></section>`;
+const days=D.map((d,i)=>{const l=i<D.length-1;return `<section id="${d.id}"><div class="dh"><h2>${pk([d.n,d.ne])}</h2><span class="tag">${d.tag}</span></div><div class="d">${pk([d.h,d.he])}</div><div class="x">🛏 ${t("stay")}: ${d.stay}</div><p class="note det">${d.note}</p><ol>${d.i.map(item).join("")}</ol><p class="pn"><a href="#${i?D[i-1].id:""}">${i?"‹ "+t("day")+" "+i:"‹ "+t("home")}</a><a href="#${l?D[i+1].id:""}">${l?t("day")+" "+(i+2)+" ›":t("home")+" ›"}</a></p></section>`}).join("");
+const rute=`<section id="rute"><div class="rg"><div class="mp" id="mp"></div><div><h2 class="sh">${t("rt")}</h2><p class="note">${t("rtn")}</p><div class="card"><b>${t("pay")}</b><div class="x">Singapore: kartu Visa/Mastercard contactless buat MRT dan bus, tunai SGD buat hawker kecil. Malaysia: tunai ringgit dan kartu Touch n Go, Grab bisa kartu. Banyak app bank Indonesia bisa QRIS lintas negara ke SG dan MY, cek di app lo. Tukar uang di money changer kota, jangan di bandara.</div></div><ol>${R.map(r=>li(r[0],r[1],`<div class="x"><b>Naik:</b> ${r[2]}</div><div class="x"><b>Bayar:</b> ${r[3]}</div><div class="x"><b>Biaya:</b> ${r[4]}</div>`,"s")).join("")}</ol></div></div></section>`;
+const makan=`<section id="makan"><h2 class="sh">${t("fd")}</h2><p class="note">${t("fdn")}</p></section><section id="makan-sg"><div class="d">Singapore</div>${fl(F.sg)}</section><section id="makan-jb"><div class="d">Johor Bahru</div>${fl(F.jb)}</section><section id="makan-kl"><div class="d">Kuala Lumpur</div>${fl(F.kl)}</section>`;
+const biaya=`<section id="biaya"><h2 class="sh">${t("ex")}</h2><div class="card"><div class="row">${t("rate")}: SGD <input id="rs" type="number" style="width:90px"> MYR <input id="rm" type="number" style="width:90px"></div><div class="row"><select id="eh">${D.map(d=>`<option>${pk([d.n,d.ne])}</option>`).join("")}</select><select id="ek"><option>Makan</option><option>Hotel</option><option>Transport</option><option>Tiket</option><option>Oleh-oleh</option><option>Lainnya</option></select><input id="ed" placeholder="${t("ph")}"><input id="ea" type="number" placeholder="${t("am")}" style="width:90px"><select id="ec"><option>SGD</option><option>MYR</option><option>IDR</option></select><button class="go" id="eg">${t("add")}</button></div></div><div class="card"><div class="tot" id="et"></div><div class="x" id="ep"></div><div id="el"></div></div></section>`;
+$("app").innerHTML=home+days+rute+makan+biaya+`<section id="cek">${ckHtml()}</section>`;
+$("mp").innerHTML=`<svg viewBox="0 0 320 440" role="img" aria-label="Peta skematik rute"><path d="M120 20L200 40L215 120L240 200L252 270L236 306L190 300L170 240L120 160L88 90Z" fill="var(--line)"/><path d="M8 210L62 196L140 330L122 384L62 344Z" fill="var(--line)"/><path d="M12 396L120 406L118 424L14 418Z" fill="var(--line)"/><g font-size="11" fill="var(--mut)"><text x="150" y="60">MALAYSIA</text><text x="24" y="262">SUMATERA</text><text x="40" y="420">JAWA</text></g><path d="M64 404L214 326" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="2 5" fill="none"/><path d="M150 170Q60 260 64 404" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="2 5" fill="none"/><path d="M214 326L212 296" stroke="#c2410c" stroke-width="3.5"/><path d="M212 296L150 170" stroke="#b8860b" stroke-width="2.5" stroke-dasharray="7 4" fill="none"/><g fill="var(--card)" stroke="var(--tx)" stroke-width="2"><circle cx="64" cy="404" r="6"/><circle cx="214" cy="326" r="6"/><circle cx="212" cy="296" r="6"/><circle cx="150" cy="170" r="6"/></g><g fill="var(--tx)"><circle cx="156" cy="150" r="3"/><circle cx="148" cy="192" r="3"/></g><g font-size="11" font-weight="600" fill="var(--tx)"><text x="76" y="398">Jakarta</text><text x="224" y="340">Singapore</text><text x="224" y="294">Johor Bahru</text><text x="160" y="174">Kuala Lumpur</text></g><g font-size="9" fill="var(--mut)"><text x="164" y="146">Batu Caves</text><text x="156" y="206">Putrajaya</text></g><g font-size="11" font-weight="700" text-anchor="middle"><circle cx="139" cy="365" r="9" fill="var(--acc)"/><circle cx="213" cy="311" r="9" fill="var(--acc)"/><circle cx="181" cy="233" r="9" fill="var(--acc)"/><circle cx="84" cy="274" r="9" fill="var(--acc)"/><g fill="var(--bg)"><text x="139" y="369">1</text><text x="213" y="315">2</text><text x="181" y="237">3</text><text x="84" y="278">4</text></g></g></svg><div class="lg"><span><i style="border-color:#c2410c"></i>Bus / MRT</span><span><i style="border-color:#b8860b;border-top-style:dashed"></i>Kereta</span><span><i style="border-color:#dc2626;border-top-style:dotted"></i>Pesawat</span></div><div class="note">1 CGK→SIN (26 Nov) · 2 SIN→Johor (28 Nov) · 3 JB→KL (29 Nov) · 4 KUL→CGK (2 Des). Peta skematik, bukan skala.</div>`;
+drawE();
+$("rs").oninput=e=>{E.rate.SGD=+e.target.value||0;sv("trip-exp",E);drawE()};
+$("rm").oninput=e=>{E.rate.MYR=+e.target.value||0;sv("trip-exp",E);drawE()};
+$("eg").onclick=()=>{const a=+$("ea").value;if(!a)return;E.items.push({h:$("eh").value,k:$("ek").value,d:$("ed").value,a:a,c:$("ec").value});$("ea").value="";$("ed").value="";sv("trip-exp",E);drawE()};
+$("el").onclick=e=>{const i=e.target.dataset.i;if(i!==undefined){E.items.splice(+i,1);sv("trip-exp",E);drawE()}};
+const ck=()=>{$("cek").innerHTML=ckHtml();sv("trip-ck",C)};
+$("cek").onchange=e=>{const d=e.target.dataset;if(d.c!==undefined){C[+d.c].d=e.target.checked;ck()}else if(d.t!==undefined){C[+d.t].t=e.target.value;sv("trip-ck",C)}};
+$("cek").onclick=e=>{const d=e.target.dataset;if(d.x!==undefined){C.splice(+d.x,1);ck()}else if(e.target.id=="ca"){const v=$("ci").value.trim();if(v){C.push({g:$("cg").value,t:v,d:false});ck()}}};
+go();
+}
+const V={home:["home"],rute:["rute"],makan:["makan","makan-sg","makan-jb","makan-kl"],biaya:["biaya"],cek:["cek"]};
+D.forEach(d=>V[d.id]=[d.id]);
+V["makan-sg"]=V["makan-jb"]=V["makan-kl"]=V.makan;
+function go(){const h=location.hash.slice(1),v=V[h]?h:"home";
+document.querySelectorAll("#app>section").forEach(s=>s.hidden=!V[v].includes(s.id));
+$("top").hidden=v!=="home";
+const e=$(h);if(h.startsWith("makan-")&&e)e.scrollIntoView();else scrollTo(0,0)}
+addEventListener("hashchange",go);
+document.addEventListener("click",e=>{
+const b=e.target.closest(".dd>button"),p=b&&b.parentNode,was=p&&p.classList.contains("open");
+document.querySelectorAll(".dd").forEach(x=>x.classList.remove("open"));
+if(p&&!was)p.classList.add("open");
+if(e.target.id=="lg"){L=L=="id"?"en":"id";sv("trip-lang",L);render()}
+});
+render();
+</script>
+</body>
+</html>
